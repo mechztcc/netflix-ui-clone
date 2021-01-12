@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './MovieRow.css'
+import './styles.css'
 
 function MovieRow({ title, items}) {
     return (

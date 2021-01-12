@@ -11,7 +11,7 @@ const basicFetch = async (endpoint) => {
 
 
 const Tmdb = {
-    
+
     getHomeList: async () => {
         return [
             {
@@ -22,7 +22,7 @@ const Tmdb = {
             {
                 slug: 'trending',
                 title: 'Recomendados',
-                items:  await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'toprated',
@@ -32,7 +32,7 @@ const Tmdb = {
             {
                 slug: 'actions',
                 title: 'Ação',
-                items:  await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
+                items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'comedy',
@@ -54,8 +54,31 @@ const Tmdb = {
                 title: 'Documentário',
                 items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             }
-            
+
         ]
+    },
+    getMovieInfo: async (movieId, type) => {
+        let info = {}
+
+        if (movieId) {
+            switch (type) {
+                case 'movie':
+                    info = await basicFetch(`/movie${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                    break;
+
+                case 'tv':
+                    info = await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                    break;
+
+                default:
+                    info = null;
+                    break
+
+            }
+        }
+
+
+        return info;
     }
 }
 
