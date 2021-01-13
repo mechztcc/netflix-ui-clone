@@ -5,7 +5,7 @@ import Tmdb  from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie/';
 import Header from './components/Header';
-
+import Footer from './components/Footer'
 
 function App() {
 
@@ -62,6 +62,7 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} alt={item.original_title}/>
         ))}
       </section>
+      <Footer />
     </div>
 
   );
