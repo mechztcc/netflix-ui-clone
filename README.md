@@ -1,3 +1,8 @@
+[![netflix-clone.png](https://i.postimg.cc/c4cDxhM2/netflix-clone.png)](https://postimg.cc/8jjdwhYm)
+
+To see this content: https://alberto-netflix-ui-clone.netlify.app/
+All this content has academic purposes
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
