@@ -66,7 +66,7 @@ function App() {
 
       {movieList.length <= 0 && 
         <div className="loading" alt="Carregando">
-          <img src="https://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="loading" alt=""/>
+          <img src="https://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="loading"/>
         </div>
       }
     </div>
